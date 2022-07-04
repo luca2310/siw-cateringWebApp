@@ -1,0 +1,40 @@
+CASI D'USO PROGETTO CATERING SIW
+CATARINELLA LUCA 547511
+
+CASO D'USO 1 - Aggiunta di un buffet
+	1. Admin accede al sistema tramite username e password
+	2. Il sistema mostra la pagina di default
+	3. L'admin sceglie di aggiungere un buffet
+	4. L'admin inserisce nome e descrizione del buffet
+	5. Il sistema mostra tutti i possibili chef
+	6. L'admin selezione lo chef da associare al buffet
+	7. Il sistema mostra i dati del buffet creato
+
+CASO D'USO 2 -	Modifica di un buffet
+	1. Admin accede al sistema tramite username e password
+	2. Il sistema mostra la pagina di default
+	3. L'admin seleziona un buffet da modificare
+	4. Il sistema mostra i dati del buffet selezionato
+	5. L'admin sceglie di modificare il buffet
+	6. L'admin inserisce il nuovo nome e la nuova descrizione
+	7. Il sistema mostra tutti i possibili chef
+	8. L'admin selezione il nuovo chef da associare al buffet
+	9. Il sistema mostra i dati del buffet modificato
+
+CASO D'USO 3 - Visione dati di un buffet
+	1. Utente accede al sistema tramite username e password
+	2. L'utente sceglie di visualizzare un buffet
+	3. Il sistema mostra tutti i buffet disponibili
+	4. L'utente sceglie il buffet da visualizzare
+	5. Il sistema mostra i dati del buffet scelto
+
+CASO D'USO 4 - Visione dati di un piatto appartenente a un buffet
+	1. Utente accede al sistema tramite username e password
+	2. L'utente sceglie di visualizzare un buffet
+	3. Il sistema mostra tutti i buffet disponibili
+	4. L'utente sceglie il buffet da visualizzare
+	5. Il sistema mostra i dati del buffet scelto
+	6. L'utente sceglie un piatto del buffet da visualizzare
+	7. Il sistema mostra i dati del piatto scelto
+
+	
