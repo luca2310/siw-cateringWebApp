@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Catering</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/indexCss.css}">
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <p class="navbar-text">
+                <a class="link" th:href="@{/}">Home</a>
+                <a class="link" th:href="@{/elencoChef}">Chef</a>
+                <a class="link" th:href="@{/elencoBuffet}">Buffet</a> 
+                <a class="link" th:href="@{/elencoPiatti}">Piatti</a>
+                <a class="link" th:href="@{/elencoIngredienti}">Ingredienti</a>
+                <a class="link" th:href="@{/login}"><button class="link">Login</button></a>
+            </p>
+        </div>
+
+        <img class="card-img" th:src="@{/images/catering5.jpg}" >
+        <div class="container card-img-overlay mt-4">
+
+            <div class=" text-center mt-5 ">
+                <h1 class="title">LOGIN</h1>
+            </div>
+        
+        
+            <div class="row ">
+                <div class="col-lg-7 mx-auto">
+                    <div class="card mt-2 mx-auto p-4 bg-light">
+                        <div class="card-body bg-light">
+           
+                            <div class = "container">
+                                <form id="contact-form" role="form" th:action="@{/login}" method="POST">
+                                    <!--
+                                    <div th:if="${#fields.hasGlobalErrors()}">
+                                        <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">Errore Globale</p>
+                                    </div>
+                                    -->
+                                    <div class="controls">
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_username">Username *</label>
+                                                    <input id="form_username" type="text" name="username" class="form-control" placeholder="Insert username *" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_password">Password *</label>
+                                                    <input id="form_password" type="password" name="password" class="form-control" placeholder="Insert password *" required>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-12">                         
+                                                <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" >
+                                            </div>             
+                                        </div>        
+                                    </div>
+                                </form>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 style="color: rgb(118, 136, 224);">
+                                            Non sei ancora registrato?<br>
+                                            <a class="link" th:href="@{/register}">Registrati ora</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-white fixed-bottom" style="background-color: rgb(118, 136, 224);">
+            <div style="background-color: rgb(118, 136, 224);">
+                <p>Progetto di Luca Catarinella 547511
+                    <br>
+                    luc.catarinella@stud.uniroma3.it</p>
+            </div>
+        </footer>
+    </body>
+
+
+</html>

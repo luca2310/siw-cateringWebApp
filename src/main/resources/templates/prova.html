@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Progetto Catering</title>
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="../static/css/prova.css">
+    </head>
+
+    <body>
+        <div id="navbar">
+            <p id="navbar-text">
+                <a class="link" th:href="@{/index}">Home</a>
+                <a class="link" th:href="@{/chef}">Chef</a>
+                <a class="link" th:href="@{/buffet}">Buffet</a> 
+                <a class="link" th:href="@{/piatti}">Piatti</a>
+                <a class="link" th:href="@{/ingredienti}">Ingredienti</a>
+                <a class="link" th:href="@{/login}"><button class="link">Login</button></a>
+            </p>
+        </div>
+        <div style="background-image: url(../static/catering1.jpg); background-size: 100%; height: 600px;">
+            <p id="pageTitle">PROGETTO CATERING SIW</p>
+        </div>
+
+        <hr class="hr">
+
+        <div id="chefDiv">
+            <br>
+            <h1 class="title">I NOSTRI CHEF</h1>
+            <br>
+            <div id="div1" class="d-flex flex-row">
+                <div class="col-md-4">
+                    <img style="border-radius: 50%;" width="100%" height="auto" src="../static/saltBae.webp">
+                    <p class="nomeChef">Nusret Gökçe</p>
+                    <p class="descrChef">Noto anche come "Salt Bae" per la sua famosa mossa, Nusret è un chef di origini turche specializzato in piatti a base di carne.</p>
+                </div>
+                <div class="col-md-4">
+                    <img style="border-radius: 50%;" width="100%" height="auto" src="../static/giorgione.jpg">
+                    <p class="nomeChef">Giorgio Barchiesi</p>
+                    <p class="descrChef">Noto anche come "Giorgione", è uno chef di orgini romane, specializzato in piatti locali da tutta Italia.</p>
+                </div>
+                <div class="col-md-4">
+                    <img style="border-radius: 50%;" width="100%" height="auto" src="../static/danieleRossi.jfif">
+                    <br>
+                    <p class="nomeChef">Daniele Rossi</p>
+                    <p class="descrChef">Divenuto famoso grazie al social TikTok, Daniele è uno chef di origini toscane in grado di replicare alla perfezione qualsiasi piatto si voglia.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr">
+
+        <div id="buffetDiv">
+            <div id="div2" class="d-flex flex-row">
+                <div style="width: calc(100% - 421px); background-image: url('../static/sfondoBuffet.jpg'); background-size: 100%;">
+                    <br>
+                    <h1 class="title">I NOSTRI BUFFET</h1>
+                    <br>
+                    <p style="text-align: end; color: white; padding-right: 20px;">
+                        I nostri chef ci permettono di offrire una vasta quantità di buffet,
+                        <br>
+                        con specilità di ogni tipo, italiane, straniere, locali e non.
+                        <br>
+                        Cosa aspetti a provarne qualcuno?
+                    </p>
+                </div>
+                <div>
+                    <img width="421px" height="421px" src="../static/buffet.jpg">
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr">
+
+        <div id="piattiDiv">
+            <div id="div3" class="d-flex flex-row">
+                <div>
+                    <img width="421px" height="421px" src="../static/piatti.jpg">
+                </div>
+                <div style="width: calc(100% - 421px); background-image: url('../static/sfondoPiatti.jpg'); background-size: 100%;">
+                    <br>
+                    <h1 class="title">I NOSTRI PIATTI</h1>
+                    <br>
+                    <p style="color: white; padding-left: 20px;">
+                        I nostri buffet offrono ognuno una varietà di piatti da leccarsi i baffi,
+                        <br>
+                        che i nostri chef hanno preparato con cura e amore.
+                        <br>
+                        Sono in pochi ad aver provato i sapori che solo i nostri piatti sanno dare,
+                        <br>
+                        Cosa aspetti a provarne qualcuno?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr">
+
+        <div id="ingredientiDiv">
+            <div id="div4" class="d-flex flex-row">
+                <div style="width: calc(100% - 421px); background-image: url('../static/sfondoIngredienti.jpg'); background-size: 100%;">
+                    <br>
+                    <h1 class="title">I NOSTRI INGREDIENTI</h1>
+                    <br>
+                    <p style="text-align: end; color: white; padding-right: 20px;">
+                        Tutti i nostri piatti sono fatti con ingredienti di alta qualità,
+                        <br>
+                        attentamente selezionati, e al 100% naturali.
+                        <br>
+                        Cosa aspetti a provarne qualcuno?
+                    </p>
+                </div>
+                <div>
+                    <img width="421px" height="421px" src="../static/ingredienti.jpg">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <br><br>
+        <footer class="text-white fixed-bottom" style="background-color: rgb(118, 136, 224);">
+            <div style="background-color: rgb(118, 136, 224);">
+                <p>Progetto di Luca Catarinella 547511
+                    <br>
+                    luc.catarinella@stud.uniroma3.it</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/indexCss.css}">
+        <title>Ingrediente Update</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <p class="navbar-text">
+                <a class="link" th:href="@{/}">Home</a>
+                <a class="link" th:href="@{/elencoChef}">Chef</a>
+                <a class="link" th:href="@{/elencoBuffet}">Buffet</a> 
+                <a class="link" th:href="@{/elencoPiatti}">Piatti</a>
+                <a class="link" th:href="@{/elencoIngredienti}">Ingredienti</a>
+                <a class="link" th:href="@{/login}"><button class="link">Login</button></a>
+            </p>
+        </div>
+
+        <img class="card-img" th:src="@{/images/sfondoIngredienteForm.jpg}" >
+        <div class="container card-img-overlay mt-4">
+
+            <div class=" text-center mt-5 ">
+                <h1 class="title">AGGIORNAMENTO INGREDIENTE</h1>
+            </div>
+        
+        
+            <div class="row ">
+                <div class="col-lg-7 mx-auto">
+                    <div class="card mt-2 mx-auto p-4 bg-light">
+                        <div class="card-body bg-light">
+           
+                            <div class = "container">
+                                <form id="contact-form" role="form" th:action="@{'/admin/ingredienteUpdate' + '/' + ${ingrediente.id}}" method="POST" th:object="${ingrediente}">
+                                    <div th:if="${#fields.hasGlobalErrors()}">
+                                        <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">Errore Globale</p>
+                                    </div>
+                                    
+                                    <div class="controls">
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_name">Nome *</label>
+                                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Inserisci il nome dell'ingrediente *" required="required" th:field="*{nome}" >
+                                                    <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_origin">Origine *</label>
+                                                    <input id="form_origin" type="text" name="origin" class="form-control" placeholder="Inserisci l'origine dell'ingrediente *" required="required" th:field="*{origine}" >
+                                                    <span th:if="${#fields.hasErrors('origine')}" th:errors="*{origine}"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_message">Descrizione *</label>
+                                                    <textarea th:field="*{descr}" id="form_message" name="message" class="form-control" placeholder="Write your description here." rows="4" required="required" >
+                                                    </textarea>
+                                                    <span th:if="${#fields.hasErrors('descr')}" th:errors="*{descr}"></span>
+                                                </div>        
+                                            </div>
+
+                                            <div class="col-12 mt-3">
+                                                <div class="form-group">
+                                                    <label for="form_name">Seleziona Piatto</label>
+                                                    <div th:if="${piattiDisponibili}">
+                                                        <select class="form-select" name="piattoScelto" aria-label="Default select example">
+                                                            <option th:each="piatto : ${piattiDisponibili}" th:value="${piatto.id}">
+                                                                <span th:text="${piatto.nome}">Nome Piatto</span>
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <div th:unless="${piattiDisponibili}">
+                                                        <div class="notification p-3 is-danger">Nessun Piatto disponibile!</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-12">                         
+                                                <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Update Ingrediente" >
+                                            </div>             
+                                        </div>        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-white fixed-bottom" style="background-color: rgb(118, 136, 224);">
+            <div style="background-color: rgb(118, 136, 224);">
+                <p>Progetto di Luca Catarinella 547511
+                    <br>
+                    luc.catarinella@stud.uniroma3.it</p>
+            </div>
+        </footer>
+    </body>
+</html>

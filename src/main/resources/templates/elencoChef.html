@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/indexCss.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/elencoChef.css}">
+        <title>Elenco Chef</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <p class="navbar-text">
+                <a class="link" th:href="@{/}">Home</a>
+                <a class="link" th:href="@{/elencoChef}">Chef</a>
+                <a class="link" th:href="@{/elencoBuffet}">Buffet</a> 
+                <a class="link" th:href="@{/elencoPiatti}">Piatti</a>
+                <a class="link" th:href="@{/elencoIngredienti}">Ingredienti</a>
+                <a class="link" th:href="@{/login}"><button class="link">Login</button></a>
+            </p>
+        </div>
+        <br><br><br>
+	    <h1 class="title">ELENCO CHEF</h1>
+    	<ul class="list-group">
+	        <li th:each="chef : ${elencoChef}" class="list-group-item btn" >	
+                
+    		    <div>
+	    		    <div class="card m-5" style="border: 10px solid rgb(118, 136, 224);">
+		    		    <img class="card-img" th:src="@{/images/chefSingolo.jpg}" height="400px">
+    		    		<div class="card-img-overlay" >
+	    		    		<h3 class="card-title color-titles d-flex justify-content-center rounded-pill " th:text="${chef.nome}" 
+                                style="color: black; background-color: rgba(118, 136, 224, .8);">
+                                <strong>Chef</strong>
+                            </h3>
+    					    <a href="chef.html" class ="link btn mt-8" style="background-color:#ab9eb5;" th:href="@{'/chef' + '/' + ${chef.id}}">
+                                Dettagli
+                            </a>
+	    		    	</div>
+    		    	</div>
+        		</div>
+			
+	        </li>
+    	</ul>
+
+    	<a class="btn btn-outline btn-block my-2 my-sm-0 active" style="background-color:rgb(118, 136, 224);" th:href="@{/admin/chefForm}" >
+	    	Aggiungi uno Chef!
+	    </a>
+        <br><br><br>
+        <footer class="text-white fixed-bottom" style="background-color: rgb(118, 136, 224);">
+            <div style="background-color: rgb(118, 136, 224);">
+                <p>Progetto di Luca Catarinella 547511
+                    <br>
+                    luc.catarinella@stud.uniroma3.it</p>
+            </div>
+        </footer>
+	</body>
+</html>

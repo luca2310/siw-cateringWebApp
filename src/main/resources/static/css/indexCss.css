@@ -1,0 +1,90 @@
+.navbar{
+    background-color: rgb(118, 136, 224);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-text{
+    text-align: right;
+    padding-top: 10px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+#pageTitle{
+    font-size: 150px;
+    text-align: center;
+    color: rgb(118, 136, 224);
+    padding-top: 80px;
+}
+
+#firstDiv{
+    background-image: url('../images/catering1.jpg');
+    background-size: 100%;
+    height: 600px;
+}
+
+.link{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color: white;
+    text-decoration: underline;
+    color: black;
+}
+
+.title{
+    text-align: center;
+    font-size: 60px;
+    color: rgb(118, 136, 224);
+}
+
+.nomeChef{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(118, 136, 224);
+}
+
+.descrChef{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    background-color: white;
+}
+
+.hr{
+    border: 10px solid rgb(118, 136, 224);
+}
+
+#chefDiv{
+    background-image: url('../images/catering3.jpg');
+    background-repeat: no-repeat;
+}
+
+#buffetDiv{
+    width: calc(100% - 421px);
+    background-image: url('../images/sfondoBuffet.jpg');
+    background-size: 100%;
+}
+
+#piattiDiv{
+    width: calc(100% - 421px);
+    background-image: url('../images/sfondoPiatti.jpg');
+    background-size: 100%;
+}
+
+#ingredientiDiv{
+    width: calc(100% - 421px);
+    background-image: url('../images/sfondoIngredienti.jpg');
+    background-size: 100%;
+}
+
+footer{
+    height: 50px;
+    padding-left: 20px;
+}

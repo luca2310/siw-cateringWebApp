@@ -1,0 +1,66 @@
+#navbar{
+    background-color: rgb(118, 136, 224);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+#navbar-text{
+    text-align: right;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+#pageTitle{
+    font-size: 150px;
+    text-align: center;
+    color: rgb(118, 136, 224);
+    padding-top: 80px;
+}
+
+.link{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color: white;
+    text-decoration: underline;
+    color: black;
+}
+
+.title{
+    text-align: center;
+    font-size: 60px;
+    color: rgb(118, 136, 224);
+}
+
+.nomeChef{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(118, 136, 224);
+}
+
+.descrChef{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    background-color: white;
+}
+
+.hr{
+    border: 10px solid rgb(118, 136, 224);
+}
+
+#chefDiv{
+    background-image: url('../catering3.jpg');
+    background-repeat: no-repeat;
+}
+
+footer{
+    height: 50px;
+    padding-left: 20px;
+}
